@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "e2b205a3-151e-4d6a-87fa-b4a7c5cb3412",
+		"name": "open-calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "open-calculator /status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"equation\": \"2+2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/v1/status",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "open-calculator /tokenize",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/api/v1/tokenize?input=2%2B2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tokenize"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "2%2B2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "open-calculator /postfix",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/api/v1/postfix?input=2%2B2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"postfix"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "2%2B2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "open-calculator /evaluate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{domain}}/api/v1/evaluate?input=2%2B2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"evaluate"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "2%2B2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7b917642-bb13-4776-95f2-9675b7a21712",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ce559752-da15-4f83-9859-402601860100",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e2e252d2-3bd5-4c57-85bb-72828a3c9167",
+			"key": "domain",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
